@@ -8,7 +8,12 @@
 		    Form Tambah Data Mahasiswa
 		  </div>
 		  <div class="card-body">
-		  	<?= validation_errors(); ?>
+		  	<?php if( validation_errors() ) : ?>
+		  		<div class="alert alert-danger" role="alert">
+		  			<?= validation_errors(); ?>	
+		  		</div>
+		  	<?php endif; ?>
+
 		   	<form action="" method="post">
 			<div class="form-group">
 				<div class="form-group">
@@ -37,11 +42,5 @@
 			</form>
 		  </div>
 		</div>
-			
-		
-
-		</div>
 	</div>
-	
-
 </div>
